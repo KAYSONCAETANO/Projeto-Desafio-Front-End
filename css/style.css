@@ -4,12 +4,22 @@
     box-sizing: border-box;
 }
 
+:root{
+    --cor-textos: #f0f0f0; 
+    --cor-background: #000000;
+    --cor-efeito-hover: #ffffff;
+    --cor-efeito-sombra: #FFFFFF99;
+}
+
+body{
+    background-color: var(--cor-background);
+}
+
 .nav-menu {
     display: flexbox;
     width: 100%;
-    height: 100px;
-    border-bottom: 5pxpx;
-    background: linear-gradient();
+    height: 60px;
+    border-bottom: 5px;
 }
 
 .nav-menu-conteudo {
@@ -18,14 +28,53 @@
     align-items: center;
     gap: 35px;
     padding: 30px;
-    background-color: #000000;
+    background-color: var(--cor-background);
     border-style: none;
 }
 
 .nav-menu-conteudo a {
-    text-decoration: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: bold;
     text-transform: uppercase;
+    color: var(--cor-textos); 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.nav-menu-conteudo a:hover {
+    color: var(--cor-efeito-hover);
+    text-shadow: 0 0 10px var(--cor-efeito-sombra);
+}
+
+.banner{
+    margin-top: 75px;
+    height: 1920px;
+    background-image: url('/Projeto-Desafio-Front-End/img/img-fundo.png');
+    background-repeat: no-repeat;
+    background-size: 1600px 700px; 
+    background-position: top;
+}
+
+.conteudo_banner {
+    width: 60%;
+    padding: 50px;
+    margin-top: 30px;
+    
+}
+
+.banner_titulo  {
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 35px;
+    margin-top: 25px;
+    color: var(--cor-textos);
+    
+}
+
+.banner_paragrafo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    color: var(--cor-textos);
+}

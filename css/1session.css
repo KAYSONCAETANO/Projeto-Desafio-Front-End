@@ -1,0 +1,263 @@
+/* ================================================== */
+/* ========= VARIÁVEIS DE COR E FONTES ======== */
+/* ================================================== */
+:root {
+    /* Cores */
+    --cor-fundo-principal: #000;
+    --cor-fundo-card: #fff;
+    --cor-fundo-modal-bg: #DDDAD3; /* ADICIONE ESTA LINHA (cor bege/cinza) */
+    --cor-fundo-overlay: rgba(0, 0, 0, .85);
+
+    /* O resto das variáveis permanece igual */
+    --cor-texto-principal: #000;
+    --cor-texto-secundario: #555;
+    --cor-texto-modal: #1a1a1a;
+    --cor-link-fechar: #333;
+
+    /* Fontes */
+    --fonte-serif: 'Playfair Display', serif;
+    --fonte-sans: 'Space Grotesk', sans-serif;
+}
+/* ================================================== */
+/* ========= SEÇÃO INTERATIVA E CARD (VERSÃO CORRIGIDA) ========= */
+/* ================================================== */
+
+.interactive-section {
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: var(--cor-fundo-principal);
+}
+
+.card-link-wrapper {
+    text-decoration: none;
+    display: block; 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil inicial */
+}
+
+.card-link-wrapper:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5); /* Sombra mais forte no hover */
+}
+
+/* === A MÁGICA DO NOVO LAYOUT ACONTECE AQUI === */
+.article-card {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-principal);
+    width: 670px;    /* Largura fixa */
+    height: 820px;   /* Altura para proporção A4 (Largura / sqrt(2)) */
+    display: flex;   /* MUDANÇA CRÍTICA: Ativa o layout de colunas */
+    flex-direction: row; /* Garante que os filhos fiquem lado a lado */
+    overflow: hidden;
+}
+
+.card-image-col {
+    flex: 0 0 45%; /* A coluna da imagem ocupa 45% da largura e não cresce/encolhe */
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text-col {
+    flex: 1; /* A coluna de texto ocupa o espaço restante */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo de texto verticalmente */
+    justify-content: space-between; /* Empurra o header para cima e o content para baixo */
+    padding: 3rem;
+}
+
+.card-header {
+    width: 100%;
+    text-align: right; /* Alinha o número à direita */
+    font-family: var(--fonte-sans);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.card-title {
+    font-family: var(--fonte-serif);
+    font-size: 4.5rem; /* Aumentei para mais impacto */
+    line-height: 1.05;
+    color: var(--cor-texto-principal);
+    margin-bottom: 1.5rem;
+}
+
+.card-description {
+    font-family: var(--fonte-sans);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ================================================== */
+/* ======== ESTILOS DO MODAL (POP-UP) - Sem alterações ======== */
+/* ================================================== */
+
+/* ================================================== */
+/* ======== ESTILOS DO MODAL (VERSÃO EXPANDIDA) ======== */
+/* ================================================== */
+
+/* ================================================== */
+/* ======== ESTILOS DO MODAL (VERSÃO REVISTA) ======== */
+/* ================================================== */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-fundo-modal-bg, #DDDAD3);
+    z-index: 100;
+    display: flex; /* Usamos flex para centralizar o inner, caso ele não ocupe 100% */
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.modal-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px; /* Limite máximo para telas ultra-wide */
+    max-height: 90vh;  /* Um pouco de respiro vertical */
+    background-color: var(--cor-fundo-card);
+    
+    /* MUDANÇA: Agora o .modal-inner é um container flex para as colunas */
+    display: flex;
+    overflow: hidden; /* Esconde qualquer conteúdo que vaze */
+
+    /* Animação de entrada continua a mesma */
+    bottom: -100vh;
+    transform: rotate(10deg);
+    transition: all 0.6s ease-in-out;
+}
+
+.modal-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-overlay:target .modal-inner {
+    bottom: 0;
+    transform: rotate(0deg);
+}
+
+/* --- Novas Colunas do Modal --- */
+.modal-col-image {
+    flex: 0 0 40%; /* Coluna da imagem com 40% da largura */
+    height: 100%;
+    background-color: #000;
+}
+.modal-col-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Efeito sutil na imagem */
+}
+
+.modal-col-text {
+    flex: 1; /* Coluna do texto ocupa o resto do espaço */
+    height: 100%;
+    overflow-y: auto; /* Apenas esta coluna terá rolagem */
+    padding: 4rem 5%; /* Espaçamento interno */
+    position: relative;
+}
+
+.modal-header {
+    font-family: var(--fonte-sans);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #b3b3b3;
+    position: absolute;
+    top: 4rem;
+    left: 5%;
+}
+
+.modal-close {
+    position: fixed; /* Fixo na viewport */
+    top: 2rem;
+    right: 3rem;
+    color: var(--cor-texto-principal);
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    z-index: 110;
+    transition: transform 0.3s ease;
+}
+.modal-close:hover {
+    transform: rotate(90deg);
+}
+
+.modal-content {
+    padding-top: 4rem; /* Empurra o conteúdo para baixo do header */
+}
+
+.modal-content h1,
+.modal-content h2,
+.modal-content h3 {
+    font-family: var(--fonte-serif);
+    color: var(--cor-texto-principal);
+}
+
+.modal-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content h2 {
+    font-family: var(--fonte-sans);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-texto-secundario);
+    margin: -1rem 0 2rem 0; /* Ajuste fino de posicionamento */
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content p, 
+.modal-content li {
+    font-family: var(--fonte-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+.modal-content li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+.modal-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--cor-texto-principal);
+}
