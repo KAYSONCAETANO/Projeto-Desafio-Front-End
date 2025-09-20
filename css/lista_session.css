@@ -1,14 +1,14 @@
 .professions-section {
     display: flex;
-    background-color: var(--cor-fundo-principal, #000);
-    color: #fff;
+    background-color: var(--cor-fundo-principal); 
+    color: var(--cor-texto-principal); 
     padding: 10vh 5vw;
     gap: 5vw;
     min-height: 100vh;
     align-items: center;
 }
 
-/*  Coluna da Esquerda (Título)  */
+/* Coluna da Esquerda (Título)   */
 .professions-left-col {
     flex: 0 0 40%; 
     display: flex;
@@ -39,14 +39,14 @@
     font-size: clamp(2.5rem, 4vw, 3.5rem); 
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--cor-texto-principal); 
     text-align: center;
 }
 
 .professions-left-col p {
     font-family: var(--fonte-sans, sans-serif);
     font-size: clamp(1rem, 1.1vw, 1.1rem);
-    color: #aaa;
+    color: var(--cor-texto-secundario); 
     line-height: 1.7;
     max-width: 450px;
 }
@@ -63,7 +63,7 @@
 }
 
 .profession-card {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--cor-borda-sutil); 
     padding: 1.5rem 0;
     cursor: pointer;
     overflow: hidden;
@@ -74,7 +74,7 @@
 }
 
 .profession-card:not(.expand):hover {
-    background-color: #111;
+    background-color: var(--cor-fundo-secundario); 
 }
 
 .card-closed-view {
@@ -89,13 +89,13 @@
 .card-number {
     font-family: var(--fonte-sans, sans-serif);
     font-size: 1rem;
-    color: #888;
+    color: var(--cor-texto-secundario); 
     padding-right: 1.5rem;
 }
 
 .card-icon {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--cor-texto-principal); 
     margin-right: 1.5rem;
 }
 
@@ -104,14 +104,14 @@
     font-size: clamp(2rem, 3vw, 2.8rem);
     font-weight: 700;
     margin: 0;
-    color: #fff;
+    color: var(--cor-texto-principal); 
     line-height: 1;
 }
 
 .card-arrow {
     margin-left: auto;
     font-size: 1.2rem;
-    color: #888;
+    color: var(--cor-texto-secundario); 
     padding: 0 1rem;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -123,15 +123,14 @@
     font-family: var(--fonte-sans, sans-serif);
     font-size: clamp(1rem, 1vw, 1.1rem);
     line-height: 1.8;
-    color: #aaa;
+    color: var(--cor-texto-secundario); 
 }
+
 .card-expanded-view p {
     margin: 0;
     max-width: 60ch; 
 }
 
-
-/* --- Lógica da Expansão --- */
 .profession-card.expand {
     max-height: 500px; 
 }
