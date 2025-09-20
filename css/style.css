@@ -12,7 +12,14 @@
 }
 
 body{
-    background-color: var(--cor-background);
+    background-color: #111;
+    color: #fff;
+}
+
+.hero-container, main {
+    background-color: #000; 
+    position: relative; 
+    z-index: 5;
 }
 
 .nav-menu {

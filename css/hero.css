@@ -17,7 +17,7 @@
 /* Marquee (Texto no Topo) */
 .marquee {
     --gap: 3rem; /* Espaçamento entre os textos */
-    --duration: 5s; /* Velocidade da animação */
+    --duration: 8s; /* Velocidade da animação */
     display: flex;
     overflow: hidden;
     user-select: none;
@@ -127,7 +127,7 @@
 
 
 .word-1 { /* Corte */
-    top: 5vh;
+    top: 2vh;
     left: 30vw; 
     transform: rotate(-5deg);
     cursor: default;    
@@ -140,8 +140,8 @@
     z-index: 3;
 }
 
-.word-3 { /* CDigital */
-    bottom: 12vh; 
+.word-3 { /* Digital */
+    bottom: 10vh; 
     left: 8vw; 
     transform: rotate(2deg);
     cursor: default;    

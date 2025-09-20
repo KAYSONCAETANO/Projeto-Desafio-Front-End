@@ -1,0 +1,141 @@
+.professions-section {
+    display: flex;
+    background-color: var(--cor-fundo-principal, #000);
+    color: #fff;
+    padding: 10vh 5vw;
+    gap: 5vw;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/*  Coluna da Esquerda (Título)  */
+.professions-left-col {
+    flex: 0 0 40%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding-top: 10vh; 
+    align-items: center;
+}
+
+.professions-image-wrapper {
+    width: 100%;
+    max-width: 450px; 
+    margin-bottom: 3rem; 
+    position: relative;
+}
+
+.professions-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; 
+    display: block;
+    filter: grayscale(30%) contrast(110%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.professions-left-col h2 {
+    font-family: var(--fonte-serif, serif);
+    font-size: clamp(2.5rem, 4vw, 3.5rem); 
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.professions-left-col p {
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    color: #aaa;
+    line-height: 1.7;
+    max-width: 450px;
+}
+
+
+/* Lista das colunas da direita (Cards) */
+.professions-right-col {
+    flex: 1; 
+}
+
+.professions-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.profession-card {
+    border-bottom: 1px solid #333;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; 
+    max-height: 80px; 
+    transition: max-height 0.7s cubic-bezier(0.22, 1, 0.36, 1), 
+                background-color 0.4s ease;
+}
+
+.profession-card:not(.expand):hover {
+    background-color: #111;
+}
+
+.card-closed-view {
+    position: relative; 
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.card-number {
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: 1rem;
+    color: #888;
+    padding-right: 1.5rem;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.card-title-text h3 {
+    font-family: var(--fonte-serif, serif);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    line-height: 1;
+}
+
+.card-arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 0 1rem;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.card-expanded-view {
+    opacity: 1; 
+    padding: 1rem 1rem 0 calc(1rem + 2rem + 1rem); 
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: clamp(1rem, 1vw, 1.1rem);
+    line-height: 1.8;
+    color: #aaa;
+}
+.card-expanded-view p {
+    margin: 0;
+    max-width: 60ch; 
+}
+
+
+/* --- Lógica da Expansão --- */
+.profession-card.expand {
+    max-height: 500px; 
+}
+
+.profession-card.expand .card-arrow {
+    transform: rotate(180deg);
+}
