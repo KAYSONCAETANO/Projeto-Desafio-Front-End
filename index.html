@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="PT-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/1session.css"> 
+    <link rel="stylesheet" href="css/1session.css">
+    <link rel="stylesheet" href="css/hero.css">
     <title>Corte digital</title>
 </head>
-<body>
-    <header>
-        <nav class="nav-menu">
-            <div class="nav-menu-conteudo">
-                <a href="#">Início</a>
-                <a href="#">Profissões</a>
-                <a href="#">Impacto da IA</a>
-                <a href="#">Análise de Carreiras</a>
-                <a href="#">Equipe</a>
-                <a href="#">Sobre</a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="banner">
-            <div class="conteudo_banner">
-                <h1 class="banner_titulo">Como a IA está revolucionando as profissões?</h1>
-                <p class="banner_paragrafo">A inteligência artificial (IA) não está apenas mudando a forma como trabalhamos, 
-                    ela está revolucionando as profissões de várias maneiras. Em vez de simplesmente 
-                    substituir os humanos, a IA está servindo como uma ferramenta que nos permite ser mais eficientes, 
-                    tomar decisões melhores e focar em tarefas mais estratégicas e criativas.</p>
-            </div>
-            <div>
-                <img src="" alt="">
-            </div>
-        </section>
 
+<body>
+
+    <div class="hero-container">
+        <div class="marquee">
+            <ul>
+              <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+              <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+              <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+              <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+              <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+            </ul>
+            <ul aria-hidden="true">
+                <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+                <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+                <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+                <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+                <li><span>• CORTE DIGITAL • IMPACTO DA IA • O FUTURO DAS PROFISSÕES</span></li>
+            </ul>
+          </div>
+
+        <header class="hero-header">
+            <div class="logo">
+                <a href="#">Corte<br>Digital</a>
+            </div>
+            <nav class="main-nav">
+                <a href="#">Projetos</a>
+                <a href="#">Impacto</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+            <div class="hero-title">
+                <span class="word-1">Corte</span>
+                <span class="word-2"></span>
+                <span class="word-3">Digital</span>
+            </div>
+
+            <div class="hero-description">
+                <p>
+                    O futuro das profissões<br>
+                    e como a inteligência artificial<br>
+                    está reescrevendo as regras<br>
+                    do trabalho criativo e técnico.
+                  </p>
+            </div>
+
+        </section>
+    </div>
+
+    <main>
         <section id="ia-programacao" class="interactive-section">
-            
             <a class="card-link-wrapper" href="#modal-programacao">
                 <div class="article-card">
                     <div class="card-image-col">
@@ -71,15 +98,11 @@
         </section>
     </main>
 
-
-    <!-- Modal primeira sessão -->
     <div class="modal-overlay" id="modal-programacao">
         <div class="modal-inner">
-    
             <div class="modal-col-image">
                 <img src="img/sessions/1session.png" alt="Tela de programação">
-           </div>
-    
+            </div>
             <div class="modal-col-text">
                 <div class="modal-header">
                     <span>01</span>
@@ -87,9 +110,7 @@
                 <div class="modal-content">
                     <h1>O impacto da IA:</h1>
                     <h2>Reescrevendo o futuro da programação</h2>
-                    
                     <p>A Inteligência Artificial está moldando o futuro do desenvolvimento de software, criando novas oportunidades e desafiando os programadores a evoluir suas habilidades. Longe de competir, a IA é uma ferramenta para tornar o trabalho mais eficiente e estratégico.</p>
-                    
                     <h3>Benefícios da IA no desenvolvimento</h3>
                     <ul>
                         <li><strong>Aumento de produtividade:</strong> Automatiza tarefas repetitivas, permitindo foco em questões estratégicas.</li>
@@ -98,10 +119,10 @@
                     </ul>
                 </div>
             </div>
-    
+            <a class="modal-close" href="#close">&times;</a>
         </div>
-        <a class="modal-close" href="#close">&times;</a>
     </div>
 
 </body>
+
 </html>

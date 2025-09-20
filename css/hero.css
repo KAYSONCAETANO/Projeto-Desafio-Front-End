@@ -1,0 +1,188 @@
+.hero-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Principal */
+.hero-container {
+    background-color: var(--cor-fundo-principal, #000);
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Marquee (Texto no Topo) */
+.marquee {
+    --gap: 3rem; /* Espaçamento entre os textos */
+    --duration: 5s; /* Velocidade da animação */
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    padding: 1.5vh 0;
+    border-bottom: 1px solid #333;
+    cursor: default;    
+    user-select: none;
+    z-index: 200;
+ 
+  }
+  
+  .marquee ul {
+    flex-shrink: 0;
+    display: flex;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 200;
+    
+  }
+  
+  .marquee:hover ul {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  .marquee span {
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(10px, 0.7vw, 14px);
+    color: #aaa;
+    white-space: nowrap;
+  }
+  
+/* Cabeçalho */
+.hero-header {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    padding: 2vh 5vw; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.logo a {
+    font-family: var(--fonte-sans, sans-serif);
+    font-weight: 700;
+    font-size: clamp(14px, 1.2vw, 22px); 
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.2;
+}
+
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1vh; 
+}
+
+.main-nav a {
+    font-family: var(--fonte-sans, sans-serif);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: clamp(13px, 1vw, 18px); 
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #888;
+}
+
+/* -- Conteúdo do Banner -- */
+.hero-section {
+    position: relative;
+    height: 95%;
+    width: 100%;
+}
+
+/* -- Título Gigante -- */
+.hero-title span {
+    position: absolute;
+    font-family: var(--fonte-serif, serif);
+    font-weight: 700;
+    font-size: 18vw;
+    line-height: 0.8;
+    color: #c1c1c1;
+    z-index: 1;
+}
+
+
+.word-1 { /* Corte */
+    top: 5vh;
+    left: 30vw; 
+    transform: rotate(-5deg);
+    cursor: default;    
+    user-select: none;
+}
+
+.word-2 { 
+    top: 40%;
+    left: 2%; 
+    z-index: 3;
+}
+
+.word-3 { /* CDigital */
+    bottom: 12vh; 
+    left: 8vw; 
+    transform: rotate(2deg);
+    cursor: default;    
+    user-select: none;
+}
+
+
+/*  Descrição e CTA  */
+.hero-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    max-width: 420px; 
+    min-width: 300px;
+    text-align: center;
+    z-index: 4; 
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: clamp(14px, 1.1vw, 18px); 
+    line-height: 1.7;
+    color: #c1c1c1;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+}
+
+.hero-cta {
+    position: absolute;
+    bottom: 20vh;
+    right: 15vw;
+    z-index: 2;
+    font-family: var(--fonte-sans, sans-serif);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(13px, 1vw, 18px); 
+    letter-spacing: 0.1vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-description {
+        font-size: 12px; /* Define um tamanho mínimo para a descrição */
+    }
+}
