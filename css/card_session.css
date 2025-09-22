@@ -21,7 +21,7 @@
     background-color: var(--cor-fundo-card-claro); 
     color: var(--cor-texto-card-escuro);
     width: 670px;   
-    height: 820px;   
+    height: 670px;   
     display: flex;   
     flex-direction: row; 
     overflow: hidden;
