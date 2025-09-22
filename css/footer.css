@@ -1,0 +1,59 @@
+.site-footer {
+    background-color: var(--cor-fundo-principal); 
+    color: var(--cor-texto-secundario); 
+    padding: 6rem 5vw 2rem 5vw; 
+    border-top: 1px solid var(--cor-borda-sutil); 
+    position: relative;
+    z-index: 10; 
+}
+
+.footer-content-wrapper {
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; 
+    margin-bottom: 4rem; 
+}
+
+.footer-column {
+    flex: 1; 
+    min-width: 200px; 
+}
+
+.footer-column h4 {
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-column p {
+    margin: 0;
+    font-family: var(--fonte-serif, serif);
+    font-size: 1.5rem;
+    color: var(--cor-texto-principal); 
+    line-height: 1.2;
+}
+
+.footer-column .project-subtitle {
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: 1rem;
+    color: var(--cor-texto-secundario); 
+    margin-top: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--cor-borda-sutil); 
+    padding-top: 2rem;
+    font-family: var(--fonte-sans, sans-serif);
+    font-size: 0.9rem;
+    color: var(--cor-texto-terciario); 
+}

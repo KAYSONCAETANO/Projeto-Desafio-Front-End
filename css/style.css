@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo-principal: #000;
+    --cor-fundo-secundario: #111;
+    --cor-fundo-card-escuro: #1e1e1e;
+    --cor-fundo-card-claro: #fff;
+    --cor-borda-sutil: #333;
+    --cor-fundo-overlay: rgba(0, 0, 0, 0.85)
+
+    --cor-titulo-serif: #E0E0E0;
+    --cor-texto-principal: #fff;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-texto-terciario: #666;
+    --cor-texto-card-escuro: #000;
+    
+    --fonte-serif: 'Lora', serif;
+    --fonte-sans: 'Inter', sans-serif;
+}
+
+body.light-theme {
+    /* TEMA CLARO (ATIVADO VIA JS) */
+    --cor-fundo-principal: #F0F8FF; 
+    --cor-fundo-secundario: #e4e8f3; 
+    --cor-fundo-card-escuro: #FFFACD;
+    --cor-fundo-card-claro: #fff;
+    --cor-borda-sutil: #DCDCDC;
+
+    --cor-titulo-serif: #003366; 
+    --cor-texto-principal: #0056b3; 
+    --cor-texto-secundario: #333;
+    --cor-texto-terciario: #666;
+    --cor-texto-card-escuro: #000;
+}
+
+*, *::before, *::after {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body{
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-principal);
+}
+
+.hero-container, main {
+    background-color: #000; 
+    position: relative; 
+    z-index: 5;
+}
+
+.nav-menu {
+    display: flexbox;
+    width: 100%;
+    height: 60px;
+    border-bottom: 5px;
+}
+
+.nav-menu-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 30px;
+    background-color: var(--cor-background);
+    border-style: none;
+}
+
+.nav-menu-conteudo a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: bold;
+    text-transform: uppercase;
+    color: var(--cor-textos); 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-menu-conteudo a:hover {
+    color: var(--cor-efeito-hover);
+    text-shadow: 0 0 10px var(--cor-efeito-sombra);
+}
+
+.banner{
+    margin-top: 75px;
+    height: 1920px;
+    background-image: url('/Projeto-Desafio-Front-End/img/img-fundo.png');
+    background-repeat: no-repeat;
+    background-size: 1600px 700px; 
+    background-position: top;
+}
+
+.conteudo_banner {
+    width: 60%;
+    padding: 50px;
+    margin-top: 30px;
+    
+}
+
+.banner_titulo  {
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 35px;
+    margin-top: 25px;
+    color: var(--cor-textos);
+    
+}
+
+.banner_paragrafo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    color: var(--cor-textos);
+}
