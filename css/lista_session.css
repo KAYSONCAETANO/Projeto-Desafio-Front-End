@@ -31,7 +31,6 @@
     border-radius: 12px; 
     display: block;
     filter: grayscale(30%) contrast(110%);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .professions-left-col h2 {

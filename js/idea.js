@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardContainer.classList.add('is-flipped');
         document.body.classList.add('light-theme');
         if (professionsImage) {
-            professionsImage.src = 'img/sessions/lista_session.webp'; // Caminho para a imagem colorida
+            professionsImage.src = 'img/sessions/brain_color.gif'; // Caminho para a imagem colorida
         }
     }
     
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cardContainer.classList.remove('is-flipped');
         document.body.classList.remove('light-theme');
         if (professionsImage) {
-            professionsImage.src = 'img/sessions/lista_session-cinza.png'; // Caminho para a imagem cinza
+            professionsImage.src = 'img/sessions/brain_black.gif'; // Caminho para a imagem cinza
         }
     }
 
