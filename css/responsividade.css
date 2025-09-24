@@ -1,0 +1,490 @@
+/* ===== RESPONSIVIDADE.CSS ===== */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Tablet grande (até 1024px) */
+@media screen and (max-width: 1024px) {
+    .hero-title span {
+        font-size: 15vw;
+    }
+    
+    .hero-description {
+        width: 40vw;
+        font-size: 14px;
+    }
+    
+    .professions-section {
+        padding: 8vh 4vw;
+        gap: 4vw;
+    }
+    
+    .modal-inner {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-col-text {
+        padding: 2rem 3%;
+    }
+    
+    .modal-header {
+        left: 3%;
+    }
+}
+
+/* Tablet (até 768px) */
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero-container {
+        height: 100vh;
+    }
+    
+    .hero-header {
+        padding: 2vh 4vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    
+    .main-nav {
+        flex-direction: row;
+        gap: 3vw;
+    }
+    
+    .hero-title span {
+        font-size: 16vw;
+    }
+    
+    .word-1 {
+        top: 15vh;
+        left: 20vw;
+        transform: rotate(-2deg);
+    }
+    
+    .word-3 {
+        bottom: 25vh;
+        left: 15vw;
+        transform: rotate(1deg);
+    }
+    
+    .hero-description {
+        top: 52%;
+        width: 60vw;
+        max-width: 300px;
+    }
+    
+    /* Seção de Profissões */
+    .professions-section {
+        flex-direction: column;
+        padding: 6vh 4vw;
+        gap: 6vh;
+    }
+    
+    .professions-left-col {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+    }
+    
+    .professions-image-wrapper {
+        max-width: 300px;
+        margin-bottom: 2rem;
+    }
+    
+    .professions-right-col {
+        width: 100%;
+    }
+    
+    .card-title-text h3 {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+    }
+    
+    .card-expanded-view {
+        padding: 1rem 1rem 0 1rem;
+    }
+    .profession-card.expand .card-expanded-view {
+        padding: 1rem 1rem 0 1rem; /* Mesmo padding quando expandido */
+    }
+    
+    /* Modal */
+    .modal-inner {
+        flex-direction: column;
+        max-height: 95vh;
+    }
+    
+    .modal-col-image {
+        flex: 0 0 40%;
+        min-height: 200px;
+    }
+    
+    .modal-col-text {
+        flex: 1;
+        padding: 2rem;
+    }
+    
+    .modal-header {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-content {
+        padding-top: 0;
+    }
+    
+    .modal-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Card Interativo */
+    .interactive-section {
+        padding: 8vh 4vw;
+    }
+    
+    .article-card {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .card-image-col {
+        flex: 0 0 250px;
+    }
+    
+    .card-text-col {
+        padding: 2rem;
+    }
+    
+    .card-title {
+        font-size: 3rem;
+    }
+    
+    /* Idea Card */
+    .idea-card-container {
+        width: 90%;
+        max-width: 450px;
+        height: 220px;
+    }
+    
+    .idea-card-back {
+        padding: 25px;
+    }
+    
+    .content h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer-main {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+}
+
+/* Mobile (até 480px) */
+@media screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero-header {
+        padding: 2vh 5vw;
+    }
+    
+    .logo a {
+        font-size: 16px;
+    }
+    
+    .main-nav a {
+        font-size: 12px;
+    }
+    
+    .marquee span {
+        font-size: 10px;
+    }
+    
+    .hero-title span {
+        font-size: 25vw;
+    }
+    
+    .word-1 {
+        top: 22vh;
+        left: 8vw;
+        transform: rotate(-10deg);
+    }
+    
+    .word-3 {
+        bottom: 23vh;
+        left: 12vw;
+        transform: rotate(3deg);
+    }
+    
+    .hero-description {
+        top: 55%;
+        width: 75vw;
+        font-size: 11px;
+        line-height: 1.6;
+    }
+    
+    /* Seção de Profissões */
+    .professions-section {
+        padding: 5vh 5vw;
+    }
+    
+    .professions-left-col h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .professions-image-wrapper {
+        max-width: 250px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .profession-card {
+        padding: 1rem 0;
+    }
+    
+    .card-closed-view {
+        padding: 0 0.5rem;
+    }
+    
+    .card-number {
+        padding-right: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-title-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .card-expanded-view {
+        padding: 1rem 0.5rem 0 0.5rem;
+        font-size: 0.9rem;
+    }
+    .profession-card.expand .card-expanded-view {
+        padding: 1rem 0.5rem 0 0.5rem;
+    }
+    .profession-card.expand {
+        max-height: 600px;
+    }
+    
+    /* Card Interativo */
+    .interactive-section {
+        padding: 6vh 5vw;
+    }
+    
+    .article-card {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-image-col {
+        flex: 0 0 200px;
+    }
+    
+    .card-text-col {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card-description {
+        font-size: 0.9rem;
+    }
+    
+    /* Modal */
+    .modal-col-image {
+        min-height: 150px;
+    }
+    
+    .modal-col-text {
+        padding: 1.5rem;
+    }
+    
+    .modal-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .modal-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .modal-close {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 2rem;
+    }
+    
+    /* Idea Card */
+    .idea-section {
+        padding: 10vh 5vw;
+    }
+    
+    .idea-card-container {
+        width: 95%;
+        max-width: 350px;
+        height: 200px;
+    }
+    
+    .idea-card-front i {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .idea-card-front span {
+        font-size: 0.9rem;
+    }
+    
+    .idea-card-back {
+        padding: 20px;
+    }
+    
+    .content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .content p {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+    
+    /* Footer */
+    .site-footer {
+        padding: 4rem 5vw 2rem 5vw;
+    }
+    
+    .footer-main {
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .footer-column h4 {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-column p {
+        font-size: 1.2rem;
+    }
+    
+    .footer-column .project-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mobile pequeno (até 360px) */
+@media screen and (max-width: 360px) {
+    .hero-title span {
+        font-size: 22vw;
+    }
+    
+    .word-1 {
+        top: 20vh;
+        left: 5vw;
+    }
+    
+    .word-3 {
+        bottom: 30vh;
+        left: 8vw;
+    }
+    
+    .hero-description {
+        width: 80vw;
+        font-size: 11px;
+    }
+    
+    .professions-left-col h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card-title-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card-title {
+        font-size: 2rem;
+    }
+    
+    .modal-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .idea-card-container {
+        height: 180px;
+    }
+    
+    .content h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajustes específicos para orientação landscape em mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-container {
+        height: 100vh;
+    }
+    
+    .hero-title span {
+        font-size: 15vh;
+    }
+    
+    .word-1 {
+        top: 5vh;
+        left: 25vw;
+    }
+    
+    .word-3 {
+        bottom: 5vh;
+        left: 8vw;
+    }
+    
+    .hero-description {
+        font-size: 10px;
+        width: 35vw;
+    }
+    
+    .professions-section {
+        padding: 5vh 5vw;
+    }
+    
+    .idea-card-container {
+        width: 400px;
+        height: 150px;
+    }
+}
+
+/* Telas menores (ex: celular) */
+@media (max-width: 600px) {
+    .close-idea-card {
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 400px) {
+    .close-idea-card {
+        top: 8px;
+        right: 8px;
+        width: 18px;
+        height: 18px;
+    }
+}

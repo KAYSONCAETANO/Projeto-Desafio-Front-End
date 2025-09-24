@@ -117,12 +117,21 @@
 
 
 .card-expanded-view {
-    opacity: 1; 
-    padding: 1rem 1rem 0 calc(1rem + 2rem + 1rem); 
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem 0 calc(1rem + 2rem + 1rem);
     font-family: var(--fonte-sans, sans-serif);
     font-size: clamp(1rem, 1vw, 1.1rem);
     line-height: 1.8;
     color: var(--cor-texto-secundario); 
+    transition: opacity 0.5s ease, max-height 0.7s cubic-bezier(0.22, 1, 0.36, 1), padding 0.5s ease;
+}
+
+.profession-card.expand .card-expanded-view {
+    opacity: 1;
+    max-height: 1000px; /* Valor suficiente para o conteúdo */
+    padding: 1rem 1rem 0 calc(1rem + 2rem + 1rem); /* Restaurar padding quando expandido */
 }
 
 .card-expanded-view p {
