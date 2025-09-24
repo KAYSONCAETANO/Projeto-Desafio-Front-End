@@ -39,7 +39,7 @@
     font-family: var(--fonte-serif, serif);
     font-size: 1.5rem;
     color: var(--cor-texto-principal); 
-    line-height: 1.2;
+    line-height: 1.4;
 }
 
 .footer-column .project-subtitle {
@@ -47,6 +47,7 @@
     font-size: 1rem;
     color: var(--cor-texto-secundario); 
     margin-top: 0.5rem;
+    line-height: 1.6;
 }
 
 .footer-bottom {
